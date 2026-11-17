@@ -14,18 +14,18 @@ const floorChecker=texMat('floor_checker',8,7),partyWallpaper=texMat('wallpaper_
 const floorMaterials={};function floor(x,z,w,d,material){let m=box(x,-.19,z,w,.38,d,material);m.receiveShadow=true;return m}
 floor(0,0,34,29,floorChecker);
 // Room floor patches are slightly above the base to make each zone legible.
-floor(-12,5,8,9,plasterWall);floor(-12,-7,8,10,kitchenTile);floor(0,11,10,7,stageWood);floor(12,6,9,10,partyWallpaper);floor(8,-1,6,6,bathTile);floor(12,-9,9,7,floorChecker);floor(0,15,9,4,plasterWall);
+floor(-12,5,8,9,floorChecker);floor(-12,-7,8,10,kitchenTile);floor(0,11,10,7,stageWood);floor(12,6,9,10,floorChecker);floor(8,-1,6,6,bathTile);floor(12,-9,9,7,floorChecker);floor(0,15,9,4,plasterWall);
 function wallSeg(x1,z1,x2,z2,h=3.5,material=wall){const cx=(x1+x2)/2,cz=(z1+z2)/2,dx=Math.abs(x2-x1),dz=Math.abs(z2-z1),len=Math.hypot(dx,dz),th=.22;let o=box(cx,h/2,cz,dx>dz?len:th,h, dz>=dx?len:th,material);if(dx>dz)wallBounds.push([cx-len/2-th/2,cx+len/2+th/2,cz-th/2,cz+th/2]);else wallBounds.push([cx-th/2,cx+th/2,cz-len/2-th/2,cz+len/2+th/2]);return o}
 // perimeter, with a clear main entrance gap on the southeast facade
 wallSeg(-17,-14.5,17,-14.5,4,texturedWall);wallSeg(-17,14.5,17,14.5,4,texturedWall);wallSeg(-17,-14.5,-17,14.5,4,texturedWall);wallSeg(17,-14.5,17,14.5,4,texturedWall);
 // office west, kitchen southwest, service corridor
 wallSeg(-16,1,-8,1);wallSeg(-16,9.5,-8,9.5);wallSeg(-16,1,-16,9.5);wallSeg(-8,1,-8,3.6);wallSeg(-8,5.6,-8,9.5);
-wallSeg(-16,-12,-8,-12);wallSeg(-16,-2,-8,-2);wallSeg(-16,-12,-16,-2);wallSeg(-8,-12,-8,-5);wallSeg(-8,-2,-8,-1);
+wallSeg(-16,-12,-8,-12,3.5,kitchenTile);wallSeg(-16,-2,-8,-2,3.5,kitchenTile);wallSeg(-16,-12,-16,-2,3.5,kitchenTile);wallSeg(-8,-12,-8,-5,3.5,kitchenTile);wallSeg(-8,-2,-8,-1,3.5,kitchenTile);
 // stage wing and back maintenance room
 wallSeg(-5,7.5,-2.2,7.5);wallSeg(2.2,7.5,5,7.5);wallSeg(-5,7.5,-5,14.5);wallSeg(5,7.5,5,14.5);wallSeg(-5,14.5,-2,14.5);wallSeg(2,14.5,5,14.5);wallSeg(-2,14.5,-2,16.5);wallSeg(2,14.5,2,16.5);wallSeg(-2,16.5,2,16.5);
 // party room and east corridor, restroom cubicles, entrance lobby
-wallSeg(8,1,16,1);wallSeg(8,11,16,11);wallSeg(16,1,16,11);wallSeg(8,1,8,4.5);wallSeg(8,7.2,8,11);
-wallSeg(5,-4,11,-4);wallSeg(5,3,11,3);wallSeg(5,-4,5,-.6);wallSeg(5,1.6,5,3);wallSeg(11,-4,11,-.6);wallSeg(11,1.6,11,3);wallSeg(8,-4,8,-1.6);wallSeg(8,.4,8,3);
+wallSeg(8,1,16,1,3.5,partyWallpaper);wallSeg(8,11,16,11,3.5,partyWallpaper);wallSeg(16,1,16,11,3.5,partyWallpaper);wallSeg(8,1,8,4.5,3.5,partyWallpaper);wallSeg(8,7.2,8,11,3.5,partyWallpaper);
+wallSeg(5,-4,11,-4,3.5,bathTile);wallSeg(5,3,11,3,3.5,bathTile);wallSeg(5,-4,5,-.6,3.5,bathTile);wallSeg(5,1.6,5,3,3.5,bathTile);wallSeg(11,-4,11,-.6,3.5,bathTile);wallSeg(11,1.6,11,3,3.5,bathTile);wallSeg(8,-4,8,-1.6,3.5,bathTile);wallSeg(8,.4,8,3,3.5,bathTile);
 wallSeg(8,-12,16,-12);wallSeg(8,-5,16,-5);wallSeg(8,-12,8,-5);wallSeg(16,-12,16,-5);wallSeg(8,-5,10,-5);wallSeg(14,-5,16,-5);
 // wall cladding: lower red dado and hazard/check band in the west hall
 for(const z of [-10,-6,-1,5]){box(0,.58,z,13,.92,.03,trim);box(0,1.1,z,13,.12,.04,mat(0xb8aa8d));}
