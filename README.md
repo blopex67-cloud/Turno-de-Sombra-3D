@@ -25,3 +25,9 @@ Este es un primer prototipo de escenario y mecánicas; no afirmar prueba visual 
 - Movimiento con colisiones de límites, escritorio y mobiliario del comedor; los botones abren/cierran las compuertas laterales.
 - HUD original de vigilancia con feed tipo CCTV, mapa de cámaras seleccionable, rótulo, scanlines y retícula.
 - Consultar `ATTRIBUTIONS.md` para las licencias CC0, CC BY 4.0 y MIT.
+
+### Correcciones posteriores basadas en capturas
+- Quitada la placa de piso que estaba debajo de todos los pisos de zona; ahora el suelo se tesela con rectángulos complementarios y sin superficies coplanares, evitando el parpadeo/z-fighting y las franjas grises.
+- Recortadas de nuevo las texturas aportadas, limpiando bordes del atlas; mipmaps y filtrado anisotrópico activados.
+- Colisión axis-by-axis contra paredes, mesas, sillas, mostradores de cocina, baño, escenario, entrada, puertas y animatrónico; atravesar diagonalmente obstáculos ya no los salta.
+- El animatrónico Quaternius/CC0 incluye clips de Collada `Robot_Idle`, `Robot_Walking`, `Robot_Running` y otros; el cargador conserva los nombres. Permanece en el escenario y cambia idle/caminar según su estado.
