@@ -17,3 +17,11 @@ Node 20, Java 17 y Android SDK: `npm install`, `npx cordova platform add android
 
 ## Nota de estado
 Este es un primer prototipo de escenario y mecánicas; no afirmar prueba visual o táctil en teléfono hasta instalarlo y probarlo allí.
+
+## Actualización visual y de juego
+- Modelo robot animado CC0 de Quaternius incorporado como Collada; se conserva el animatrónico procedural como respaldo mientras se verifica el modelo importado.
+- Material PBR Concrete 047 A a 1K (base color, normal y roughness) en muros y piso.
+- Sonidos OGG 48 kHz: ambiente industrial, drone, compuertas, cadenas y criatura.
+- Movimiento con colisiones de límites, escritorio y mobiliario del comedor; los botones abren/cierran las compuertas laterales.
+- HUD original de vigilancia con feed tipo CCTV, mapa de cámaras seleccionable, rótulo, scanlines y retícula.
+- Consultar `ATTRIBUTIONS.md` para las licencias CC0, CC BY 4.0 y MIT.
