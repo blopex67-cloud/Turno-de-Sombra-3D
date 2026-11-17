@@ -611,7 +611,7 @@
 			function parseAnimationClip( xml ) {
 
 				const data = {
-					name: xml.getAttribute( 'id' ) || 'default',
+					name: xml.getAttribute( 'name' ) || xml.getAttribute( 'id' ) || 'default',
 					start: parseFloat( xml.getAttribute( 'start' ) || 0 ),
 					end: parseFloat( xml.getAttribute( 'end' ) || 0 ),
 					animations: []
