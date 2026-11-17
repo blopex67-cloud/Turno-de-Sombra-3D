@@ -6,3 +6,6 @@
 - Three.js r128 y ColladaLoader.js: MIT, licencias conservadas en `THREE-LICENSE.txt` y cabecera de `www/lib/ColladaLoader.js`.
 
 Los recursos son fuentes de ambiente, mobiliario y criatura originales/CC0; no son assets oficiales de Five Nights at Freddy’s.
+
+- **Modelo Backrooms de referencia (no incluido en la compilación):** “Original Backrooms” de Huuxloc (@rjh41), 14k triángulos, Sketchfab, CC BY 4.0. La ficha informa que es demasiado pesado para algunos dispositivos; la descarga requiere iniciar sesión. Página: https://sketchfab.com/3d-models/original-backrooms-e5c6b30995ff442d9852a1dd697aaef1 . El nivel actual del APK está construido de forma modular para Android y no contiene ese modelo descargado.
+- **Texturas del nivel Backrooms actual:** materiales procedurales propios generados para el prototipo (pared amarilla, alfombra y plafón); no son el modelo de Sketchfab.
