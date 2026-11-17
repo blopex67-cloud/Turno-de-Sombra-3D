@@ -1,0 +1,8 @@
+{
+  "name": "turno-de-sombra",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aventura de terror 3D original para Android, en HTML y Three.js",
+  "scripts": {"build:android": "cordova build android --debug"},
+  "dependencies": {"cordova": "^12.0.0", "cordova-android": "^13.0.0", "three": "^0.180.0"}
+}
